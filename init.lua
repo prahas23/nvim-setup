@@ -1,0 +1,8 @@
+require "settings"
+require "packer-config"
+require "lualine-config"
+require "colorscheme"
+require "lsp-config"
+require "treesitter-config"
+require "nvim-tree-config"
+require "mappings"
