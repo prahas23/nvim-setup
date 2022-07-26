@@ -19,4 +19,5 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+  use 'lukas-reineke/indent-blankline.nvim'
 end)
