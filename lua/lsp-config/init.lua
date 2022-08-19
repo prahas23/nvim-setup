@@ -18,7 +18,9 @@ local nvim_lsp = require'lspconfig'
 local opts = {
     tools = {
         autoSetHints = true,
-        hover_with_actions = true,
+        on_attach = function (_, bufnr)
+          vim.keymap.set("n", "<C-space>", hover_actions.hover_actions, { buffer = bufnr })
+        end,
         inlay_hints = {
             show_parameter_hints = true,
             parameter_hints_prefix = "",
